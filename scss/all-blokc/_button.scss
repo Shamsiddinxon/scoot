@@ -3,3 +3,29 @@
     margin: 0;
     text-decoration: none;
 }
+
+.button {
+    width: 184px;
+    display: inline-block;
+    padding: 14px 39px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color:#FCB72B;
+    border-radius: 5px;
+    border:2px solid transparent;
+    transition: 0.2s;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+
+.button:active {
+    background-color: #fff;
+    color: #FCB72b;
+    border:2px solid #FCB72b;
+}

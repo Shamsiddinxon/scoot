@@ -1,0 +1,136 @@
+.header {
+    &__wrapper {
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+    }
+
+    &__button {
+        margin-left: auto;
+    }
+
+    &__hamburger {
+        display: none;
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/hamburger-menu.svg);
+        background-repeat: no-repeat;
+        background-color: #fff;
+        border:none;
+        transition: 0.2s;
+    }
+}
+
+.sitenav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        margin-left: 59px;
+        padding: 0;
+    }
+
+    &__item + &__item {
+        margin-left: 32px;
+    }
+
+    &__linc {
+        margin: 0;
+        text-decoration: none;
+        font-family: Space Mono;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 25px;
+        color: #939CAA;
+        transition: 0.2s;
+    }
+
+    &__linc:hover {
+        color: #000;
+    }
+
+    &__linc:active {
+        color: #FCB72B;
+    }
+}
+
+@media only screen and (max-width:669px) {
+  .sitenav__list {
+      margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width:637px) {
+    .header {
+
+        &__container{
+            position: relative;
+        }
+        &__hamburger {
+            display: inline-block;
+        }
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .sitenav {
+        display: none;
+    }
+
+    // .header__open
+
+    .header__open .sitenav {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 78px;
+        left: 10px;
+        right:10px;
+        padding: 0 0 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width :85%;
+        width: 100%;
+        margin: 0 auto;
+        background-image:url(../images/hamburger-bagcround.png);
+        background-repeat:no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        border: 1px solid #0E8784;
+    }
+
+    .header__open .sitenav__list {
+        align-items:center;
+        flex-direction: column;
+        margin: 0;
+        padding: 15px 0;
+        color:white;
+    }
+
+    .header__open .sitenav__item {
+        margin: 0;
+        margin: 4px;
+    }
+
+    .header__open .sitenav__linc {
+        color: white;
+    }
+
+    .header__open .header__button {
+        margin: 0 auto;
+
+    }
+
+    .header__open .header__hamburger {
+        background-image:url(../images/hamburger-menu2.svg);
+    }
+}

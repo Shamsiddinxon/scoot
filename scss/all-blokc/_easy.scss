@@ -1,6 +1,6 @@
 .easy {
-
     padding-bottom: 307px;
+    
     &__card {
         display: flex;
         justify-content: space-between;
@@ -8,16 +8,20 @@
         margin-bottom: 160px;
     }
 
-    &__card:nth-child(even) {
+    &__card:nth-child(odd) {
         flex-direction: row-reverse;
+    }
+
+    &__card {
+        position: relative;
     }
 
     &__right {
         position: relative;
-
     }
 
     &__left {
+        width: 100%;
         max-width: 445px;
     }
 
@@ -46,22 +50,108 @@
         color: #939CAA;
     }
 
-    &__img {
+    &__img3 {
         border-radius: 50%;
+    }
+
+    &__img1, &__img3 {
+        margin-left: 25px;
+    }
+
+    &__img2 {
+        margin-right: 25px;
     }
 
     &__strelka-1 {
         max-width: 740px;
         position: absolute;
-        z-index: 1;
         top: 300px;
-        right: -125px;
+        right: +80px;
     }
 
-    // &__right--oval {
-    //     position: absolute;
-    //     max-width: 200px;
-    //     top: 0;
-    //     right: -200px;
-    // }
+    &__strelka-2 {
+        position: absolute;
+        top: 50px;
+        left: -110px;
+    }
+
+    &__strelka-3 {
+        position: absolute;
+        top: 50px;
+        left: 100px;
+    }
+}
+
+@media only screen and (max-width:885px) {
+  .easy {
+    &__strelka-1 {
+        width: 90%;
+        position: absolute;
+        top: 300px;
+        left: +40px;
+    }
+  }
+}
+
+@media only screen and (max-width:897px) {
+    .easy {
+       padding-bottom: 0;
+    }
+
+  .easy__card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .easy__card:nth-child(odd) {
+    flex-direction: column;
+    text-align: center;
+    }
+
+    .easy__img1, .easy__img2,.easy__img3{
+        margin: 0px;
+        margin-bottom: 56px;
+    }
+
+    .easy__title {
+        margin-bottom: 40px;
+    }
+
+    .easy__desc {
+        margin: 0;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width:502px) {
+  .easy {
+    &__strelka-3 {
+        width: 90%;
+        position: absolute;
+        top: 50px;
+        left: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width:455px) {
+    .easy {
+        &__strelka-1 {
+            width: 90%;
+            position: absolute;
+            top: 250px;
+            left: 0px;
+        }
+      }
+}
+
+@media only screen and (max-width:392px) {
+    .easy {
+        &__strelka-1 {
+            width: 90%;
+            position: absolute;
+            top: 200px;
+            left: 0px;
+        }
+      }
 }

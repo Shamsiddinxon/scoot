@@ -1,8 +1,5 @@
 .footer {
 
-
-
-
     &__top {
         max-width: 1440px;
         margin:  0 auto;
@@ -48,6 +45,19 @@
         z-index: 1;
         background-color: #fff;
         border-radius:5px;
+    }
+
+    &__top--item:hover,&__icon--item:hover {
+        opacity: 0.8;
+    }
+
+    &__icon--item:active {
+        opacity: 0.6;
+    }
+
+    &__top--item:active {
+        background-color :#FCB72B;
+        opacity: 1;
     }
 
     &__top--item + &__top--item {
@@ -107,13 +117,21 @@
     }
 
     &__linc {
-
         text-decoration: none;
         font-weight: bold;
         font-size: 15px;
         line-height: 25px;
         color: #939CAA;
     }
+
+    &__linc:hover {
+        color:#fff;
+    }
+
+    &__linc:active {
+        color: #FCB72B;
+    }
+
 
     &__icon--item + &__icon--item {
         margin-left: 24px;
